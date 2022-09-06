@@ -1,0 +1,27 @@
+/* section priority */
+
+.list{
+  display: flex;
+
+}
+.list__item{
+  margin-right: 30px;
+  .container &:last-child {
+    margin-right: 0px;
+  }
+}
+
+.list__title{
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.list__text{
+  font-size: 14px;
+  line-height: 1.7;
+}
+.list__icon{
+  margin-bottom: 30px;
+}

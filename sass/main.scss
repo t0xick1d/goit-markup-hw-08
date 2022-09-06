@@ -1,0 +1,15 @@
+@import "./utils/vars";
+@import "./utils/reset";
+@import "./utils/common";
+
+@import "./components/header";
+@import "./components/footer";
+
+@import "./components/mainpage/hero";
+@import "./components/mainpage/priority";
+@import "./components/mainpage/employment";
+@import "./components/mainpage/team";
+@import "./components/mainpage/client";
+
+@import "./components/portfoliopage/filterbutton";
+@import "./components/portfoliopage/examples"
