@@ -577,6 +577,7 @@ header {
   .menu_container.is-open {
     display: block;
     position: fixed;
+    z-index: 1;
   }
 }
 @media screen and (min-width: 768px) {
