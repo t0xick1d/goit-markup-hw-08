@@ -15,37 +15,49 @@
   <header>
     <div class="container flexnavbarcontainer">
       <a href="./index.html" class="logo"><span class="accentlogo">Web</span>Studio</a>
-      <button type="button" class="menu__button">
+      <button type="button" class="menu__button" data-menu-open>
         <svg width="40" height="40" aria-label="Перемикач мобільного меню">
-          <use class="menu__icon-menu" href="./img/header-menu-close.svg#icon-menu"></use> 
-          <use class="menu__icon-close" href="./img/header-menu-close.svg#icon-close"></use>
+          <use class="menu__icon-menu" href="./img/header-menu-close.svg#icon-menu" ></use> 
         </svg>
       </button>
-      <nav class="navbarcontainer display__hidden">
-        <ul class="blocknav">
-          <li class="blocknav__item"><a class="navlink" href="./index.html">Студія</a></li>
-          <li class="blocknav__item current"><a class="navlink" href="./portfolio.html">Портфоліо</a></li>
-          <li class="blocknav__item"><a class="navlink" href="">Контакти</a></li>
-        </ul>
-      </nav>
-      <ul class="contacts display__hidden">
-        <li class="contacts__item">
-            <a href="mailto:info@devstudio.com" class="contacts__link">
-              <svg class="contacts__envelope-svg">
-                <use href="./img/symbol-defs-optimizate.svg#icon-envelope"></use>
+      <div class="menu_container is-open is-hidden-menu" data-menu>
+        <button type="button" class="menu__button-close" data-menu-close>
+          <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+            <use class="menu__icon-close" href="./img/header-menu-close.svg#icon-close" ></use>
+          </svg>
+        </button>
+          <nav class="navbarcontainer display__hidden">
+          <ul class="blocknav">
+            <li class="blocknav__item current"><a class="navlink" href="./index.html">Студія</a></li>
+            <li class="blocknav__item"><a class="navlink" href="./portfolio.html">Портфоліо</a></li>
+            <li class="blocknav__item"><a class="navlink" href="">Контакти</a></li>
+          </ul>
+        </nav>
+        <ul class="contacts display__hidden">
+          <li class="contacts__item">
+              <a href="mailto:info@devstudio.com" class="contacts__link">
+                <svg class="contacts__envelope-svg">
+                  <use href="./img/symbol-defs-optimizate.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
+          </li>
+          <li class="contacts__item">
+            <a href="tel:+380961111111" class="contacts__link">
+              <svg class="contacts__phone-svg">
+                <use href="./img/symbol-defs-optimizate.svg#icon-smartphone"></use>
               </svg>
-              info@devstudio.com
+              +38 096 111 11 11
             </a>
-        </li>
-        <li class="contacts__item">
-          <a href="tel:+380961111111" class="contacts__link">
-            <svg class="contacts__phone-svg">
-              <use href="./img/symbol-defs-optimizate.svg#icon-smartphone"></use>
-            </svg>
-            +38 096 111 11 11
-          </a>
-        </li>
-      </ul>        
+          </li>
+        </ul>
+        <ul class="menu__social-ul">
+          <li class="menu__social-item"><a href="" >Instagram</a></li>
+          <li class="menu__social-item"><a href="" >Twitter</a></li>
+          <li class="menu__social-item"><a href="" >Facebook</a></li>
+          <li class="menu__social-item"><a href="" >LinkedIn</a></li>
+        </ul>
+      </div>    
     </div>
   </header>
   <main>
