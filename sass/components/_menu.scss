@@ -1,0 +1,57 @@
+header{
+  position: relative;
+}
+
+.menu_container{
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &.is-hidden-menu {
+    @media screen and (max-width: 767px) {
+      position: fixed;
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
+    }
+  }
+  @media screen and (max-width:767px) {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left:0;
+    background-color: $primary-white-color;
+    // box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+    padding: 48px 40px;
+    &.is-open{
+      display: block;
+      position: fixed;
+    }
+  }
+  
+  @media screen and (min-width:768px) {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.menu__button-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  &:hover {
+    fill: #2196F3;
+  }
+}

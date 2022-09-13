@@ -1,6 +1,10 @@
 /* what do we do */
 .section-employment{
   padding-top: 0px;
+
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
 }
 .section-employment__title{
   font-weight: 700;

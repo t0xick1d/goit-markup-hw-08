@@ -29,8 +29,10 @@
 }
 
 .list-exampales{
-  display: flex;
-  flex-wrap: wrap;
+  @media screen and (min-width: 768px){
+    display: flex;
+    flex-wrap: wrap;
+  }
   & .list-exampales__item:hover
   .list-exampales__text{
   transform: translateY(-10%);
@@ -40,17 +42,33 @@
   overflow: hidden;
 }
 .list-exampales .list-exampales__item{
-  margin-right: 30px;
   margin-bottom: 30px; 
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
   }
-  &:nth-child(3n){
+  @media screen and (min-width: 768px) {
+    margin-right: 30px;
+    &:nth-child(2n){
     margin-right: 0px;
+    }
+    &:nth-last-child(-n + 2){
+      margin-bottom: 0px;
+    }
   }
-  &:nth-last-child(-n + 3){
-    margin-bottom: 0px;
+    @media screen and (min-width: 1200px) {
+    &:nth-child(2n){
+    margin-right: 30px;
+    }
+    &:nth-last-child(-n + 2){
+      margin-bottom: 30px;
+    }
+    &:nth-child(3n){
+    margin-right: 0px;
+    }
+    &:nth-last-child(-n + 3){
+      margin-bottom: 0px;
+    }
   }
 }
 

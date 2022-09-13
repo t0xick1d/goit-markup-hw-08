@@ -1,15 +1,35 @@
 /* section Team */
 .section-team__list{
-  display: flex;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+    @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
 }
 .section-team__list .item-card{
-  margin-right: 30px;
+  margin-bottom: 15px;
   background: #FFFFFF;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  &:last-child{
-    margin-right: 0px;
+  @media screen and(min-width:768px) {
+    margin: 15px;
+    width: calc((100% - 2 * 30px) / 2);
   }
+  // &:last-child{
+  //   margin-right: 0px;
+  //   margin-bottom: 0px;
+  // }
+}
+.item-card{
+  max-width: 270px;
+  margin: 0 auto;
 }
 .section-team{
   background-color: $bg-color-button;
@@ -30,6 +50,9 @@
   font-size: 16px;
   line-height: 1.19;
 }
+.item-card__img{
+  margin: 0 auto;
+}
 .item-card__employment{
   margin-top: 10px;
   margin-bottom: 16px;
@@ -41,7 +64,8 @@
 .item-card__list-team{
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
+
 }
 .item-card__link-icon{
   margin-right: 10px;

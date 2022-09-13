@@ -5,11 +5,33 @@
   background: $primary-bg-color;
 }
 .footer__container{
-  display: flex;
+  
   margin: 0 auto;
   max-width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
+  @media screen and (min-width:1200px) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+}
+.footer__block-link{
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+.footer__flexclass{
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex: 0 0 1;
+    justify-content: space-between;
+  }
+}
+
+.footer__block-logo-address{
+  text-align: center;
 }
 .logo-footer{
   color: $primary-white-color;
@@ -34,9 +56,14 @@
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-footer{
-  margin-left: 70px;
+  align-items: center;
+  margin-bottom: 60px;
+  @media screen and (min-width:1200px) {
+    margin-left: 70px;
+  }
 }
 .link-footer__title{
+  text-align: center;
   margin-bottom: 20px;
 
   font-weight: 700;
@@ -48,6 +75,7 @@
 }
 .link-footer__list{
   display: flex;
+  justify-content: center;
 }
 .link-footer__item{
   margin-right: 10px;
@@ -84,21 +112,29 @@
 }
 
 .form-footer{
-  margin-left: 93px;
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 768px) {
+    margin-left: 93px;
+  }
 }
-.form-footer input{
-  width: 358px;
+.form-footer__input{
+  width: 100%;
   height: 50px;
   outline: none;
-  margin-right: 12px;
   color: $text-silver-color;
   background-color: $primary-bg-color;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   padding-left: 16px;
+  @media screen and (min-width: 768px) {
+    width: 450px;
+  }
 }
 .form-footer__text{
+  text-align: center;
+
   margin-bottom: 20px;
   color: $primary-white-color;
   font-weight: 700;
@@ -107,12 +143,18 @@
   text-transform: uppercase;
 }
 .form-footer__input-button{
-  display: flex;
+  @media screen and (min-width:768px) {
+    margin: 0 auto;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 }
 .form-footer__input:focus-within{
   border: 1px solid $primary-white-color;
 }
 .form-footer__button{
+  margin: 20px auto;
   width: 200px;
   height: 50px;
 
@@ -125,6 +167,10 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: 1px solid $accent-color;
   border-radius: 4px;
+  @media screen and (min-width: 1200px) {
+    margin: 0 0;
+    margin-left: 12px;
+  }
 }
 .footer-form__button-text{
   margin-right: 10px;

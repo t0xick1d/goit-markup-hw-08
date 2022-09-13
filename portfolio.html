@@ -13,16 +13,22 @@
 </head>
 <body>
   <header>
-    <div class="container nomargincontainer flexnavbarcontainer">
-      <nav class="navbarcontainer">
-        <a href="./index.html" class="logo"><span class="accentlogo">Web</span>Studio</a>
+    <div class="container flexnavbarcontainer">
+      <a href="./index.html" class="logo"><span class="accentlogo">Web</span>Studio</a>
+      <button type="button" class="menu__button">
+        <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+          <use class="menu__icon-menu" href="./img/header-menu-close.svg#icon-menu"></use> 
+          <use class="menu__icon-close" href="./img/header-menu-close.svg#icon-close"></use>
+        </svg>
+      </button>
+      <nav class="navbarcontainer display__hidden">
         <ul class="blocknav">
-          <li class="blocknav__item "><a class="navlink " href="./index.html">Студія</a></li>
+          <li class="blocknav__item"><a class="navlink" href="./index.html">Студія</a></li>
           <li class="blocknav__item current"><a class="navlink" href="./portfolio.html">Портфоліо</a></li>
           <li class="blocknav__item"><a class="navlink" href="">Контакти</a></li>
         </ul>
       </nav>
-      <ul class="contacts">
+      <ul class="contacts display__hidden">
         <li class="contacts__item">
             <a href="mailto:info@devstudio.com" class="contacts__link">
               <svg class="contacts__envelope-svg">
@@ -39,7 +45,7 @@
             +38 096 111 11 11
           </a>
         </li>
-      </ul>
+      </ul>        
     </div>
   </header>
   <main>
@@ -56,7 +62,21 @@
           <li class="list-exampales__item">
             <a href="">
               <div class="list-exampales__overlay">
-                <img  src="./img/listExamples/technocrat.png" alt="Веб-сайт" width="370"/>
+                  <picture>
+                    <source srcset="
+                                    ./img/listExamples/project-desk-1x.jpg 1x,
+                                    ./img/listExamples/project-desk-2x.jpg 2x
+                                    " media="(min-width: 1200px)" />
+                    <source srcset="
+                                    ./img/listExamples/project-tab-1x.jpg 1x,
+                                    ./img/listExamples/project-tab-2x.jpg 2x
+                                    " media="(min-width: 768px)" />
+                    <source srcset="
+                                    ./img/listExamples/project-tel-1x.jpg 1x,
+                                    ./img/listExamples/project-tel-2x.jpg 2x
+                                    " media="(min-width: 320px)" />
+                    <img src="./img/listExamples/project-desk-1x.jpg" alt="Иллюстрация проекта">
+                  </picture>
                 <p class="list-exampales__text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
                 </p>
@@ -70,7 +90,21 @@
           <li class="list-exampales__item">
             <a href="">
               <div class="list-exampales__overlay">
-              <img  src="./img/listExamples/posterneworlean.png" alt="Постер з баскетболістом" width="370"/>
+              <picture>
+                  <source srcset="
+                                  ./img/listExamples/project2-desk-1x.jpg 1x,
+                                  ./img/listExamples/project2-desk-2x.jpg 2x
+                                  " media="(min-width: 1200px)" />
+                  <source srcset="
+                                  ./img/listExamples/project2-tab-1x.jpg 1x,
+                                  ./img/listExamples/project2-tab-2x.jpg 2x
+                                  " media="(min-width: 768px)" />
+                  <source srcset="
+                                  ./img/listExamples/project2-tel-1x.jpg 1x,
+                                  ./img/listExamples/project2-tel-2x.jpg 2x
+                                  " media="(min-width: 320px)" />
+                  <img src="./img/listExamples/project2-desk-1x.jpg" alt="Иллюстрация проекта">
+              </picture>
               <p class="list-exampales__text">
                 Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
               </p>
@@ -84,7 +118,21 @@
           <li class="list-exampales__item">
             <a href="">
               <div class="list-exampales__overlay">
-              <img src="./img/listExamples/seafood.png" alt="логотип ресторана" width="370"/> 
+              <picture>
+                <source srcset="
+                                ./img/listExamples/project3-desk-1x.jpg 1x,
+                                ./img/listExamples/project3-desk-2x.jpg 2x
+                                " media="(min-width: 1200px)" />
+                <source srcset="
+                                ./img/listExamples/project3-tab-1x.jpg 1x,
+                                ./img/listExamples/project3-tab-2x.jpg 2x
+                                " media="(min-width: 768px)" />
+                <source srcset="
+                                ./img/listExamples/project3-tel-1x.jpg 1x,
+                                ./img/listExamples/project3-tel-2x.jpg 2x
+                                " media="(min-width: 320px)" />
+                <img src="./img/listExamples/project3-desk-1x.jpg" alt="Иллюстрация проекта">
+              </picture>
               <p class="list-exampales__text">
                 Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
               </p>
@@ -98,7 +146,21 @@
           <li class="list-exampales__item">
             <a href="">
               <div class="list-exampales__overlay">
-              <img src="./img/listExamples/projectprime.png" alt="Навушники" width="370"/>
+              <picture>
+                <source srcset="
+                                ./img/listExamples/project4-desk-1x.jpg 1x,
+                                ./img/listExamples/project4-desk-2x.jpg 2x
+                                " media="(min-width: 1200px)" />
+                <source srcset="
+                                ./img/listExamples/project4-tab-1x.jpg 1x,
+                                ./img/listExamples/project4-tab-2x.jpg 2x
+                                " media="(min-width: 768px)" />
+                <source srcset="
+                                ./img/listExamples/project4-tel-1x.jpg 1x,
+                                ./img/listExamples/project4-tel-2x.jpg 2x
+                                " media="(min-width: 320px)" />
+                <img src="./img/listExamples/project4-desk-1x.jpg" alt="Иллюстрация проекта">
+              </picture>
               <p class="list-exampales__text">
                 Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
               </p>
@@ -112,7 +174,21 @@
           <li class="list-exampales__item">
             <a href="">
               <div class="list-exampales__overlay">
-              <img src="./img/listExamples/projectboxex.png" alt="Дві коробки" width="370"/>
+              <picture>
+                  <source srcset="
+                                  ./img/listExamples/project5-desk-1x.jpg 1x,
+                                  ./img/listExamples/project5-desk-2x.jpg 2x
+                                  " media="(min-width: 1200px)" />
+                  <source srcset="
+                                  ./img/listExamples/project5-tab-1x.jpg 1x,
+                                  ./img/listExamples/project5-tab-2x.jpg 2x
+                                  " media="(min-width: 768px)" />
+                  <source srcset="
+                                  ./img/listExamples/project5-tel-1x.jpg 1x,
+                                  ./img/listExamples/project5-tel-2x.jpg 2x
+                                  " media="(min-width: 320px)" />
+                  <img src="./img/listExamples/project5-desk-1x.jpg" alt="Иллюстрация проекта">
+              </picture>
               <p class="list-exampales__text">
                 Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
               </p>
@@ -126,7 +202,21 @@
           <li class="list-exampales__item">
             <a href="">
               <div class="list-exampales__overlay">
-              <img src="./img/listExamples/inspiration.png" alt="Веб-сайт" width="370"/>
+              <picture>
+                  <source srcset="
+                                  ./img/listExamples/project6-desk-1x.jpg 1x,
+                                  ./img/listExamples/project6-desk-2x.jpg 2x
+                                  " media="(min-width: 1200px)" />
+                  <source srcset="
+                                  ./img/listExamples/project6-tab-1x.jpg 1x,
+                                  ./img/listExamples/project6-tab-2x.jpg 2x
+                                  " media="(min-width: 768px)" />
+                  <source srcset="
+                                  ./img/listExamples/project6-tel-1x.jpg 1x,
+                                  ./img/listExamples/project6-tel-2x.jpg 2x
+                                  " media="(min-width: 320px)" />
+                  <img src="./img/listExamples/project6-desk-1x.jpg" alt="Иллюстрация проекта">
+              </picture>
               <p class="list-exampales__text">
                 Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
               </p>
@@ -139,7 +229,21 @@
           </li>
           <li class="list-exampales__item">
             <div class="list-exampales__overlay">
-            <img src="./img/listExamples/limitededition.png" alt="Відкрита книга" width="370"/>
+            <picture>
+              <source srcset="
+                              ./img/listExamples/project7-desk-1x.jpg 1x,
+                              ./img/listExamples/project7-desk-2x.jpg 2x
+                              " media="(min-width: 1200px)" />
+              <source srcset="
+                              ./img/listExamples/project7-tab-1x.jpg 1x,
+                              ./img/listExamples/project7-tab-2x.jpg 2x
+                              " media="(min-width: 768px)" />
+              <source srcset="
+                              ./img/listExamples/project7-tel-1x.jpg 1x,
+                              ./img/listExamples/project7-tel-2x.jpg 2x
+                              " media="(min-width: 320px)" />
+              <img src="./img/listExamples/project7-desk-1x.jpg" alt="Иллюстрация проекта">
+            </picture>
             <p class="list-exampales__text">
               Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
             </p>
@@ -152,7 +256,21 @@
           <li class="list-exampales__item">
             <a href="">
               <div class="list-exampales__overlay">
-              <img src="./img/listExamples/projectlab.png" alt="Бірка з назвою компанії" width="370"/>
+              <picture>
+                <source srcset="
+                            ./img/listExamples/project8-desk-1x.jpg 1x,
+                            ./img/listExamples/project8-desk-2x.jpg 2x
+                            " media="(min-width: 1200px)" />
+                <source srcset="
+                            ./img/listExamples/project8-tab-1x.jpg 1x,
+                            ./img/listExamples/project8-tab-2x.jpg 2x
+                            " media="(min-width: 768px)" />
+                <source srcset="
+                            ./img/listExamples/project8-tel-1x.jpg 1x,
+                            ./img/listExamples/project8-tel-2x.jpg 2x
+                            " media="(min-width: 320px)" />
+                <img src="./img/listExamples/project8-desk-1x.jpg" alt="Иллюстрация проекта">
+              </picture>
               <p class="list-exampales__text">
                 Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
               </p>
@@ -166,7 +284,21 @@
           <li class="list-exampales__item">
             <a href="">
               <div class="list-exampales__overlay">
-              <img src="./img/listExamples/growingbusines.png" alt="Відкритий ноут бук з діючтм сайтом" width="370"/>
+              <picture>
+                <source srcset="
+                                ./img/listExamples/project9-desk-1x.jpg 1x,
+                                ./img/listExamples/project9-desk-2x.jpg 2x
+                                " media="(min-width: 1200px)" />
+                <source srcset="
+                                ./img/listExamples/project9-tab-1x.jpg 1x,
+                                ./img/listExamples/project9-tab-2x.jpg 2x
+                                " media="(min-width: 768px)" />
+                <source srcset="
+                                ./img/listExamples/project9-tel-1x.jpg 1x,
+                                ./img/listExamples/project9-tel-2x.jpg 2x
+                                " media="(min-width: 320px)" />
+                <img src="./img/listExamples/project9-desk-1x.jpg" alt="Иллюстрация проекта">
+              </picture>
               <p class="list-exampales__text">
                 Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
               </p>
@@ -183,48 +315,50 @@
   </main>
   <footer class="footer">
     <div class="footer__container">
-      <div>
-        <a href="/" class="logo-footer"><span class="accentlogo">Web</span>Studio</a>
-        <address class="address-footer">
-          <ul>
-            <li><a href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9" target="_blank" rel="noopener noreferrer" class="address-footer__address">м. Київ, пр-т Лесі Українки, 26</a></li>
-            <li><a class="address-footer__emailnumber" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-            <li><a class="address-footer__emailnumber" href="tel:+380961111111">+38 096 111 11 11</a></li>
+      <div class="footer__block-link">
+        <div class="footer__block-logo-address">
+          <a href="/" class="logo-footer"><span class="accentlogo">Web</span>Studio</a>
+          <address class="address-footer">
+            <ul>
+              <li><a href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9" target="_blank" rel="noopener noreferrer" class="address-footer__address">м. Київ, пр-т Лесі Українки, 26</a></li>
+              <li><a class="address-footer__emailnumber" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+              <li><a class="address-footer__emailnumber" href="tel:+380961111111">+38 096 111 11 11</a></li>
+            </ul>
+          </address>
+        </div>
+        <div class="link-footer">
+          <h2 class="link-footer__title">Приеднуйся</h2>
+          <ul class="link-footer__list">
+            <li class="link-footer__item">
+              <a href="" class="link-footer__link">
+                <svg class="link-footer__svg">
+                  <use href="./img/linkfooter-opt.svg#icon-instagram"></use>
+                </svg>              
+              </a>
+            </li>
+            <li class="link-footer__item">
+              <a href="" class="link-footer__link">
+                <svg class="link-footer__svg">
+                  <use href="./img/linkfooter-opt.svg#icon-twitter"></use>
+                </svg>              
+              </a>
+            </li>
+            <li class="link-footer__item">
+              <a href="" class="link-footer__link">
+                <svg class="link-footer__svg">
+                  <use href="./img/linkfooter-opt.svg#icon-facebook"></use>
+                </svg>              
+              </a>
+            </li>
+            <li class="link-footer__item">
+              <a href="" class="link-footer__link">
+                <svg class="link-footer__svg">
+                  <use href="./img/linkfooter-opt.svg#icon-linkedin"></use>
+                </svg>              
+              </a>
+            </li>
           </ul>
-        </address>
-      </div>
-      <div class="link-footer">
-        <h2 class="link-footer__title">Приеднуйся</h2>
-        <ul class="link-footer__list">
-          <li class="link-footer__item">
-            <a href="" class="link-footer__link">
-              <svg class="link-footer__svg">
-                <use href="./img/linkfooter-opt.svg#icon-instagram"></use>
-              </svg>              
-            </a>
-          </li>
-          <li class="link-footer__item">
-            <a href="" class="link-footer__link">
-              <svg class="link-footer__svg">
-                <use href="./img/linkfooter-opt.svg#icon-twitter"></use>
-              </svg>              
-            </a>
-          </li>
-          <li class="link-footer__item">
-            <a href="" class="link-footer__link">
-              <svg class="link-footer__svg">
-                <use href="./img/linkfooter-opt.svg#icon-facebook"></use>
-              </svg>              
-            </a>
-          </li>
-          <li class="link-footer__item">
-            <a href="" class="link-footer__link">
-              <svg class="link-footer__svg">
-                <use href="./img/linkfooter-opt.svg#icon-linkedin"></use>
-              </svg>              
-            </a>
-          </li>
-        </ul>
+        </div>        
       </div>
       <form class="form-footer">
         <p class="form-footer__text">Підпишіться на розсилку</p>
