@@ -233,6 +233,7 @@ img {
 
 @media screen and (max-width: 767px) {
   .contacts__item:last-child a {
+    margin-bottom: 32px;
     font-weight: 500;
     font-size: 34px;
     line-height: 1.18;
@@ -372,6 +373,16 @@ img {
 .footer__block-logo-address {
   text-align: center;
 }
+@media screen and (max-width: 767px) {
+  .footer__block-logo-address {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__block-logo-address {
+    text-align: start;
+  }
+}
 
 .logo-footer {
   color: #FFFFFF;
@@ -406,6 +417,7 @@ img {
 @media screen and (min-width: 1200px) {
   .link-footer {
     margin-left: 70px;
+    margin-top: 15px;
   }
 }
 
@@ -417,6 +429,11 @@ img {
   line-height: 16px;
   text-transform: uppercase;
   color: #FFFFFF;
+}
+@media screen and (min-width: 1200px) {
+  .link-footer__title {
+    text-align: start;
+  }
 }
 
 .link-footer__list {
@@ -467,7 +484,7 @@ img {
   display: flex;
   flex-direction: column;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .form-footer {
     margin-left: 93px;
   }
@@ -498,6 +515,11 @@ img {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+}
+@media screen and (min-width: 1200px) {
+  .form-footer__text {
+    text-align: start;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -550,6 +572,7 @@ img {
 
 header {
   position: relative;
+  border-bottom: 1px solid #ECECEC;
 }
 
 .menu_container {
@@ -658,8 +681,12 @@ header {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  padding-top: 118px;
-  padding-bottom: 118px;
+}
+@media screen and (max-width: 1200px) {
+  .mainsection {
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
 }
 
 .mainsection button {
@@ -673,10 +700,16 @@ header {
 
 .mainsection__title {
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1, 61;
   color: #FFFFFF;
   margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .mainsection__title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .mainsection__button {
@@ -773,7 +806,6 @@ header {
 
 .form__title {
   display: block;
-  margin-top: 40px;
   margin-right: 40px;
   margin-left: 40px;
   margin-bottom: 12px;
@@ -859,9 +891,17 @@ header {
 .form__checkbox-text {
   display: block;
   margin-left: 8px;
-  font-size: 14px;
-  line-height: 1.71;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  text-align: left;
   color: #757575;
+}
+@media screen and (min-width: 1200px) {
+  .form__checkbox-text {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .form__checkbox {
@@ -922,16 +962,28 @@ header {
   .list {
     display: flex;
     flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .list {
+    justify-content: center;
   }
 }
 
-.container .list__item:last-child {
-  margin-right: 0px;
-}
 @media screen and (min-width: 768px) {
   .list__item {
-    width: 50%;
+    width: calc((100% - 60px) / 2);
+    margin-bottom: 30px;
+    margin-right: 30px;
   }
+  .list__item:last-child {
+    margin-bottom: 0px;
+    margin-right: 0px;
+  }
+}
+.container .list__item:last-child {
+  margin-right: 0px;
 }
 @media screen and (min-width: 1200px) {
   .list__item {
@@ -956,16 +1008,18 @@ header {
 .list__text {
   font-size: 14px;
   line-height: 1.7;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .list__icon {
-  display: block;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F5F4FA;
+  max-width: 450px;
   margin-bottom: 30px;
-}
-
-.list__icon svg {
-  width: 450px;
+  padding: 25px 0;
 }
 
 /* what do we do */
@@ -1047,7 +1101,6 @@ header {
 }
 
 .item-card {
-  max-width: 270px;
   margin: 0 auto;
 }
 
@@ -1240,7 +1293,7 @@ header {
     flex-wrap: wrap;
   }
 }
-.list-exampales .list-exampales__item:hover .list-exampales__text {
+.list-exampales .list-exampales__link:hover .list-exampales__text {
   transform: translateY(-10%);
 }
 
@@ -1290,6 +1343,7 @@ header {
 .list-exampales__attribute {
   font-size: 16px;
   line-height: 1.87;
+  margin: 0px;
 }
 
 .list-exampales__blockcard {

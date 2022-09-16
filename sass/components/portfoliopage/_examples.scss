@@ -33,7 +33,7 @@
     display: flex;
     flex-wrap: wrap;
   }
-  & .list-exampales__item:hover
+  & .list-exampales__link:hover
   .list-exampales__text{
   transform: translateY(-10%);
   }
@@ -80,6 +80,7 @@
 .list-exampales__attribute{
   font-size: 16px;
   line-height: 1.87;
+  margin: 0px;
 }
 
 .list-exampales__blockcard{

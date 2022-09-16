@@ -162,6 +162,7 @@
 .contacts__item{
     @media screen and (max-width:767px) {
     &:last-child a{
+      margin-bottom: 32px;
       font-weight: 500;
       font-size: 34px;
       line-height: 1.18;
