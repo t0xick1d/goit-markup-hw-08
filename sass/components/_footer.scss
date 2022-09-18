@@ -126,7 +126,7 @@
   display: flex;
   flex-direction: column;
   @media screen and (min-width: 1200px) {
-    margin-left: 93px;
+    margin-left: auto;
   }
 }
 .form-footer__input{
@@ -141,6 +141,9 @@
   padding-left: 16px;
   @media screen and (min-width: 768px) {
     width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 358px; 
   }
 }
 .form-footer__text{
@@ -168,7 +171,7 @@
   border: 1px solid $primary-white-color;
 }
 .form-footer__button{
-  margin: 20px auto;
+  margin: 20px auto 0 auto;
   width: 200px;
   height: 50px;
 
